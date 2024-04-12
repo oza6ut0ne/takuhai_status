@@ -18,7 +18,7 @@ module TakuhaiStatus
 
 	private
 		def check
-			conn = Faraday.new(url: 'http://toi.kuronekoyamato.co.jp/')
+			conn = Faraday.new(url: 'https://toi.kuronekoyamato.co.jp/')
 			res = conn.post('/cgi-bin/tneko', {number00: '1', number01: @key})
 			doc = Nokogiri(res.body.force_encoding('UTF-8'))
 
