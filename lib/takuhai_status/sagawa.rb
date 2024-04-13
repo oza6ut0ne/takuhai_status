@@ -12,7 +12,7 @@ module TakuhaiStatus
 		end
 
 		def finish?
-			return !!(@state =~ /営業所へお問い合わせください。|配達は終了致しました。$|^配達完了|引渡完了/)
+			return !!(@state =~ /配達は終了致しました。$|^配達完了|引渡完了/)
 		end
 
 	private
