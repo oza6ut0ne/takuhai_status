@@ -34,7 +34,7 @@ module TakuhaiStatus
 					state = cells[0].text.strip
 					time = Time.now
 				end
-				if state =~ /恐れ入りますが、お問い合せ送り状NOをお確かめください。|お荷物データが登録されておりません。/
+				if state =~ /恐れ入りますが、お問い合せ送り状No.をお確かめください。|恐れ入りますが、お問い合せ送り状NOをお確かめください。|お荷物データが登録されておりません。/
 					raise NotMyKey.new('invalid key')
 				end
 				return time, state
